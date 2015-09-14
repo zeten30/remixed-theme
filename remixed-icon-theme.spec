@@ -10,7 +10,7 @@ Source0:	remixed-icon-theme.tar.gz
 BuildArch:	noarch
 
 %description
-Remixed-icon-theme is a remix of my icon themes Paer, Super Flat, Breeze
+Remixed-icon-theme is a remix of my icon themes Paper, Super Flat, Breeze
 
 %prep
 %setup -q -n Remixed
