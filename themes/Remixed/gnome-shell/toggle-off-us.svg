@@ -14,8 +14,8 @@
    height="22"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="toggle-on-intl.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="toggle-off-us.svg">
   <defs
      id="defs2859">
     <inkscape:perspective
@@ -146,14 +146,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="16.760995"
+     inkscape:zoom="2.16"
+     inkscape:cx="-166.739"
      inkscape:cy="21.955673"
      inkscape:document-units="px"
      inkscape:current-layer="g37994"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -178,7 +178,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -240,16 +240,17 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-size:13.79166794px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Cantarell;-inkscape-font-specification:Cantarell Bold"
-         x="520.29974"
-         y="1997.0011"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.79166794px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="522.75458"
+         y="1997.4197"
          id="text75614"
          sodipodi:linespacing="125%"
          transform="scale(1.1236771,0.88993537)"><tspan
            sodipodi:role="line"
            id="tspan75616"
-           x="520.29974"
-           y="1997.0011">OFF</tspan></text>
+           x="522.75458"
+           y="1997.4197"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.51610661px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold'">OFF</tspan></text>
     </g>
   </g>
 </svg>

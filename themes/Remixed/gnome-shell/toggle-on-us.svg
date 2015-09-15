@@ -14,7 +14,7 @@
    height="22"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="toggle-on-us.svg">
   <defs
      id="defs2859">
@@ -88,17 +88,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="33.380898"
+     inkscape:zoom="2"
+     inkscape:cx="-150.1191"
      inkscape:cy="6.9658271"
      inkscape:document-units="px"
      inkscape:current-layer="g37994"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1375"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
+     inkscape:window-width="1557"
+     inkscape:window-height="757"
+     inkscape:window-x="82"
+     inkscape:window-y="172"
+     inkscape:window-maximized="0"
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:snap-nodes="false"
@@ -191,7 +191,8 @@
            y="1955.5205"
            x="495.94223"
            id="tspan38020"
-           sodipodi:role="line">ON</tspan></text>
+           sodipodi:role="line"
+           style="font-size:15.51610689px;-inkscape-font-specification:'Fira Sans Bold';font-family:'Fira Sans';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal">ON</tspan></text>
     </g>
   </g>
 </svg>
