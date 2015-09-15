@@ -1,6 +1,6 @@
 Name:		remixed-theme
-Version:	1.0
-Release:	2
+Version:	1.1
+Release:	1
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -11,7 +11,7 @@ Requires: 	mozilla-fira-sans-fonts mozilla-fira-mono-fonts mozilla-fira-fonts-co
 BuildArch:	noarch
 
 %description
-Remixed-theme is a remix of my favourite GTK2/3 - Arc-Darker, Copernico
+Remixed-theme is a remix of my favourite GTK2/3 theme- Arc-Darker and customized default gnome-shell
 
 %prep
 %setup -q -n Remixed
@@ -31,9 +31,11 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Tue Sep 15 2015 Milan Zink <zeten30@gmail.com> - 1.1-1
+- Gnome-shell theme changed
+
 * Mon Sep 14 2015 Milan Zink <zeten30@gmail.com> - 1.0-2
 - GTK2/3 updates
 
 * Wed Sep 09 2015 Milan Zink <zeten30@gmail.com> - 1.0-1
 - Initial package for Fedora
-
