@@ -18,7 +18,9 @@ Remixed-theme is a remix of my favourite GTK2/3 theme- Arc-Darker and customized
 
 %build
 # Nothing to build
-Unified colors GTK -> Gnome-shell
+
+%install
+%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed
 for file in gtk-2.0 gtk-3.0 gnome-shell images ; do
 	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
 done
