@@ -33,7 +33,7 @@ done
 - RPM spec dependencies
 
 * Wed Sep 16 2015 Milan Zink <zeten30@gmail.com> - 1.2-1
-- Unified colors GTK -> Gnome-shell
+- Unified colors GTK, Gnome-shell
 
 * Tue Sep 15 2015 Milan Zink <zeten30@gmail.com> - 1.1-2
 - Gnome-shell theme fixes
