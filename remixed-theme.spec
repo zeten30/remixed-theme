@@ -29,10 +29,10 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
-* Tue Sep 17 2015 Milan Zink <zeten30@gmail.com> - 1.2-2
+* Thu Sep 17 2015 Milan Zink <zeten30@gmail.com> - 1.2-2
 - RPM spec dependencies
 
-* Tue Sep 17 2015 Milan Zink <zeten30@gmail.com> - 1.2-1
+* Wed Sep 16 2015 Milan Zink <zeten30@gmail.com> - 1.2-1
 - Unified colors GTK -> Gnome-shell
 
 * Tue Sep 15 2015 Milan Zink <zeten30@gmail.com> - 1.1-2
