@@ -1,13 +1,13 @@
 Name:		remixed-theme
 Version:	1.2
-Release:	1
+Release:	2
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
 URL:		https://github.com/zeten30/remixed-theme
 Vendor:		Milan Zink <zeten30@gmail.com>
 Source0:	remixed-theme.tar.gz
-Requires: 	mozilla-fira-sans-fonts mozilla-fira-mono-fonts mozilla-fira-fonts-common
+Requires: 	mozilla-fira-sans-fonts mozilla-fira-mono-fonts mozilla-fira-fonts-common gtk-murrine-engine gtk2-engines
 BuildArch:	noarch
 
 %description
@@ -18,9 +18,7 @@ Remixed-theme is a remix of my favourite GTK2/3 theme- Arc-Darker and customized
 
 %build
 # Nothing to build
-
-%install
-%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed
+Unified colors GTK -> Gnome-shell
 for file in gtk-2.0 gtk-3.0 gnome-shell images ; do
 	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
 done
@@ -31,6 +29,9 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Tue Sep 17 2015 Milan Zink <zeten30@gmail.com> - 1.2-2
+- RPM spec dependencies
+
 * Tue Sep 17 2015 Milan Zink <zeten30@gmail.com> - 1.2-1
 - Unified colors GTK -> Gnome-shell
 
