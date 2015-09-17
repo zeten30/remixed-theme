@@ -1,6 +1,6 @@
 Name:		remixed-theme
-Version:	1.1
-Release:	2
+Version:	1.2
+Release:	1
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -31,6 +31,9 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Tue Sep 17 2015 Milan Zink <zeten30@gmail.com> - 1.2-1
+- Unified colors GTK -> Gnome-shell
+
 * Tue Sep 15 2015 Milan Zink <zeten30@gmail.com> - 1.1-2
 - Gnome-shell theme fixes
 
