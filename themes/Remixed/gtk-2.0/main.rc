@@ -37,10 +37,12 @@ style "default" {
   GtkScrolledWindow::scrollbar-spacing = 0
   GtkScrolledWindow::scrollbars-within-bevel = 1
 
-  GtkVScale::slider_length = 15
-  GtkVScale::slider_width = 15
-  GtkHScale::slider_length = 15
-  GtkHScale::slider_width = 15
+  GtkScale::slider_length = 15
+  GtkScale::slider_width = 15
+  GtkScale::trough-side-details = 1
+
+  GtkProgressBar::min-horizontal-bar-height = 8
+  GtkProgressBar::min-vertical-bar-width = 8
 
   GtkStatusbar::shadow_type = GTK_SHADOW_NONE
   GtkSpinButton::shadow_type = GTK_SHADOW_NONE
@@ -1871,18 +1873,36 @@ style "range" {
 
     image {
       function = BOX
-      detail = "trough"
+      detail = "trough-upper"
       file = "assets/trough-horizontal.png"
-      border = { 4, 4, 0, 0 }
+      border = { 8, 8, 0, 0 }
       stretch = TRUE
       orientation = HORIZONTAL
     }
 
     image {
       function = BOX
-      detail = "trough"
+      detail = "trough-lower"
+      file = "assets/trough-horizontal-active.png"
+      border = { 8, 8, 0, 0 }
+      stretch = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function = BOX
+      detail = "trough-upper"
       file = "assets/trough-vertical.png"
-      border = { 0, 0, 4, 4 }
+      border = { 0, 0, 8, 8 }
+      stretch = TRUE
+      orientation = VERTICAL
+    }
+
+    image {
+      function = BOX
+      detail = "trough-lower"
+      file = "assets/trough-vertical-active.png"
+      border = { 0, 0, 8, 8 }
       stretch = TRUE
       orientation = VERTICAL
     }
