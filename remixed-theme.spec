@@ -1,6 +1,6 @@
 Name:		remixed-theme
 Version:	1.2
-Release:	4
+Release:	6
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -31,6 +31,9 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Mon Nov 9 2015 Milan Zink <zeten30@gmail.com> - 1.2-6
+- Arc-Darker updates
+
 * Tue Oct 13 2015 Milan Zink <zeten30@gmail.com> - 1.2-4
 - Arc-Darker updates
 
