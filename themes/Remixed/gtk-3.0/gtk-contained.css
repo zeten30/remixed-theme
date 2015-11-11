@@ -800,7 +800,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .
   .linked.vertical > .button:first-child {
     border-top-style: solid; }
 
-.menuitem.button.flat, .menuitem.sidebar-button.button, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .app-notification .button.flat,
+.menuitem.button.flat, .menuitem.sidebar-button.button, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .notebook tab .button, .app-notification .button.flat,
 .app-notification .sidebar-button.button,
 .app-notification.frame .button.flat, .app-notification.frame .sidebar-button.button, .app-notification .button.flat:insensitive,
 .app-notification .sidebar-button.button:insensitive,
@@ -1611,44 +1611,47 @@ column-header .button, column-header .button:hover, column-header .button:active
       color: rgba(207, 218, 231, 0.2);
       border-color: transparent; }
 
-.menu, .popup {
+.menu {
   margin: 4px;
   padding: 0;
   border-radius: 0;
   background-color: #ffffff;
   border: 1px solid #dbdfe3; }
-  .csd .menu, .csd .popup {
+  .csd .menu {
     padding: 4px 0px;
     border-radius: 2px;
     border: none; }
-  .menu .menuitem, .popup .menuitem {
+  .menu .menuitem {
     padding: 5px; }
-    .menu .menuitem:hover, .popup .menuitem:hover {
+    .menu .menuitem:hover {
       color: #5c616c;
       background-color: rgba(0, 0, 0, 0.04);
       border: solid rgba(0, 0, 0, 0.08);
       border-width: 1px 0 1px 0; }
-    .menu .menuitem:insensitive, .popup .menuitem:insensitive {
+    .menu .menuitem:insensitive {
       color: rgba(92, 97, 108, 0.55); }
-    .menu .menuitem.separator, .popup .menuitem.separator {
+    .menu .menuitem.separator {
       color: rgba(255, 255, 255, 0); }
-    .menu .menuitem.arrow, .popup .menuitem.arrow {
+    .menu .menuitem.arrow {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-    .menu .menuitem.arrow:dir(rtl), .popup .menuitem.arrow:dir(rtl) {
+    .menu .menuitem.arrow:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-  .menu.button, .popup.button {
+  .menu.button {
     border-style: none;
     border-radius: 0; }
-    .menu.button.top, .popup.button.top {
+    .menu.button.top {
       border-bottom: 1px solid #efeff0; }
-    .menu.button.bottom, .popup.button.bottom {
+    .menu.button.bottom {
       border-top: 1px solid #efeff0; }
-    .menu.button:hover, .popup.button:hover {
+    .menu.button:hover {
       background-color: #efeff0; }
-    .menu.button:insensitive, .popup.button:insensitive {
+    .menu.button:insensitive {
       color: transparent;
       background-color: transparent;
       border-color: transparent; }
+
+.csd .popup {
+  border-radius: 2px; }
 
 .menuitem .accelerator {
   color: alpha(currentColor,0.55); }
@@ -2520,6 +2523,17 @@ GtkPlacesSidebar.sidebar .list-row.activatable {
   .sidebar-item.needs-attention > GtkLabel {
     background-size: 6px 6px, 0 0; }
 
+GtkPlacesView .server-list-button > GtkImage {
+  transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -gtk-icon-transform: rotate(0turn); }
+
+GtkPlacesView .server-list-button:checked > GtkImage {
+  transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -gtk-icon-transform: rotate(-0.5turn); }
+
+GtkPlacesView .list-row.activatable:hover, GtkPlacesView GtkPlacesSidebar.sidebar .has-open-popup, GtkPlacesSidebar.sidebar GtkPlacesView .has-open-popup {
+  background-color: transparent; }
+
 GtkPaned {
   -GtkPaned-handle-size: 1;
   -gtk-icon-source: none;
@@ -2707,12 +2721,15 @@ GtkVolumeButton.button {
     box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.87), 0 5px 5px 0 rgba(0, 0, 0, 0.2); }
   .window-frame.tiled {
     border-radius: 0; }
+  .window-frame.popup {
+    box-shadow: none;
+    border-radius: 0; }
   .window-frame.ssd {
     border-radius: 3px 3px 0 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65); }
     .window-frame.ssd.maximized {
       border-radius: 0; }
-  .window-frame.csd.popup, .window-frame.csd.menu {
+  .window-frame.csd.popup {
     border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1); }
   .window-frame.csd.tooltip {
@@ -2733,12 +2750,11 @@ GtkVolumeButton.button {
 
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton {
-  padding: 7px 4px;
+  padding: 6px 4px;
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  background-color: rgba(47, 52, 63, 0);
-  border-width: 0; }
+  background-color: rgba(47, 52, 63, 0); }
   .header-bar .button.titlebutton:hover,
   .titlebar .button.titlebutton:hover {
     color: rgba(207, 218, 231, 0.8);
@@ -2759,7 +2775,8 @@ GtkVolumeButton.button {
     color: transparent;
     background-color: transparent;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border-width: 0; }
     .header-bar .button.titlebutton.close:backdrop,
     .header-bar .button.titlebutton.maximize:backdrop,
     .header-bar .button.titlebutton.minimize:backdrop,
@@ -2974,9 +2991,6 @@ TerminalWindow .notebook .active-page .button:hover, TerminalWindow .notebook .p
 TerminalWindow .notebook .active-page .button:active, TerminalWindow .notebook .prelight-page .button:active {
   color: #5294E2; }
 
-NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
-  border-radius: 3px; }
-
 .nautilus-canvas-item {
   border-radius: 2px; }
 
@@ -3035,6 +3049,9 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
 
 NautilusListView .view {
   border-bottom: 1px solid #dbdfe3; }
+
+NemoWindow EelEditableLabel.entry {
+  transition: none; }
 
 NemoWindow .sidebar .frame {
   border-width: 0; }
@@ -3717,6 +3734,9 @@ GraniteWidgetsPopOver .sidebar.view,
 GraniteWidgetsPopOver * {
   background-color: transparent; }
 
+GraniteWidgetsXsEntry.entry {
+  padding: 4px; }
+
 .h1 {
   font: open sans 24px; }
 
@@ -4003,8 +4023,8 @@ NemoWindow.maximized .sidebar,
 MarlinViewWindow.maximized .sidebar {
   background-color: #353945; }
 
-NemoWindow .pane-separator,
-MarlinViewWindow .pane-separator {
+NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
+MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
   background-color: rgba(53, 57, 69, 0.95); }
 
 GtkFileChooserDialog.background.csd, GtkFileChooserDialog.background {
@@ -4042,10 +4062,6 @@ GeditWindow.background.csd > .titlebar .pane-separator:backdrop,
 GeditWindow.background.csd.maximized > .titlebar .pane-separator:backdrop {
   background-color: rgba(38, 42, 51, 0.97); }
 
-FeedReaderreaderUI.background.csd > .titlebar,
-GeditWindow.background.csd > .titlebar {
-  background-color: transparent; }
-
 FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar,
 GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar {
   background-color: rgba(47, 52, 63, 0.97); }
@@ -4060,10 +4076,18 @@ GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.title
   GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
     background-color: #323843; }
 
+FeedReaderreaderUI.background.csd > FeedReaderreaderHeaderbar.titlebar,
+GeditWindow.background.csd > .titlebar {
+  background-color: transparent; }
+
 GeditWindow.background.csd {
   background-color: transparent; }
-  GeditWindow.background.csd .pane-separator {
-    background-color: rgba(53, 57, 69, 0.95); }
+
+GeditWindow.background .gedit-side-panel-paned .pane-separator {
+  background-color: rgba(53, 57, 69, 0.95); }
+
+GeditWindow.background .gedit-bottom-panel-paned .pane-separator {
+  background-color: #dbdfe3; }
 
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }
