@@ -18,7 +18,7 @@
  */
 stage {
   font-family: "Fira Sans", Sans-Serif;
-  font-size: 11pt;
+  font-size: 10pt;
   color: #D3DAE3; }
 
 .button {
@@ -1187,23 +1187,6 @@ StScrollBar {
   height: 2px;
   margin-bottom: 6px;
   background-color: #5294E2; }
-
-#dashtodockContainer .app-well-app-running-dot {
-  background: none;
-  width: 28px;
-  height: 4px; }
-
-#dashtodockContainer .running1 .app-well-app-running-dot {
-  background-image: url("common-assets/dash/running1.svg"); }
-
-#dashtodockContainer .running2 .app-well-app-running-dot {
-  background-image: url("common-assets/dash/running2.svg"); }
-
-#dashtodockContainer .running3 .app-well-app-running-dot {
-  background-image: url("common-assets/dash/running3.svg"); }
-
-#dashtodockContainer .running4 .app-well-app-running-dot {
-  background-image: url("common-assets/dash/running4.svg"); }
 
 .show-apps .overview-icon {
   padding: 11px;
