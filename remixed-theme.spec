@@ -1,13 +1,13 @@
 Name:		remixed-theme
 Version:	1.4
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
 URL:		https://github.com/zeten30/remixed-theme
 Vendor:		Milan Zink <zeten30@gmail.com>
 Source0:	remixed-theme.tar.gz
-Requires: 	mozilla-fira-sans-fonts mozilla-fira-mono-fonts mozilla-fira-fonts-common gtk-murrine-engine gtk2-engines
+Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-source-code-pro-fonts
 BuildArch:	noarch
 
 %description
@@ -31,6 +31,9 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Thu Feb 4 2016 Milan Zink <zeten30@gmail.com> - 1.4-3
+- GTK3 theme fixes, package dependencies
+
 * Thu Feb 4 2016 Milan Zink <zeten30@gmail.com> - 1.4-2
 - Fonts in gnome-shell
 
@@ -41,7 +44,7 @@ done
 - GTK & gnome-shell theme update
 
 * Wed Nov 11 2015 Milan Zink <zeten30@gmail.com> - 1.3-1
-- master -> Fedora 23 
+- master -> Fedora 23
 
 * Mon Nov 9 2015 Milan Zink <zeten30@gmail.com> - 1.2-6
 - Arc-Darker updates
