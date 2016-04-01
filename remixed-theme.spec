@@ -1,6 +1,6 @@
 Name:		remixed-theme
-Version:	1.4
-Release:	3%{?dist}
+Version:	1.5
+Release:	1%{?dist}
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -31,6 +31,13 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Fri Apr 1 2016 Milan Zink <zeten30@gmail.com> - 1.5-1
+- Full theme set (including metacity, cinnamon, xfwm4)
+- Transparency dropped
+
+* Tue Mar 29 2016 Milan Zink <zeten30@gmail.com> - 1.4-4
+- GTK3/Gnome shell theme fixes
+
 * Thu Feb 4 2016 Milan Zink <zeten30@gmail.com> - 1.4-3
 - GTK3 theme fixes, package dependencies
 
