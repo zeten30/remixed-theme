@@ -1,6 +1,6 @@
 Name:		remixed-theme
 Version:	1.5
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -21,7 +21,7 @@ Remixed-theme is a remix of my favourite GTK2/3 theme- Arc-Darker and customized
 
 %install
 %{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed
-for file in gtk-2.0 gtk-3.0 gnome-shell ; do
+for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
 	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
 done
 
@@ -31,6 +31,10 @@ done
 %{_datadir}/themes/Remixed
 
 %changelog
+* Fri Apr 1 2016 Milan Zink <zeten30@gmail.com> - 1.5-1
+- Full theme set (including metacity, cinnamon, xfwm4)
+- GTK2 uses dark theme
+
 * Fri Apr 1 2016 Milan Zink <zeten30@gmail.com> - 1.5-1
 - Full theme set (including metacity, cinnamon, xfwm4)
 - Transparency dropped
