@@ -1,6 +1,6 @@
 Name:		remixed-theme
-Version:	1.5
-Release:	2%{?dist}
+Version:	1.6
+Release:	1%{?dist}
 Summary:	Remix of my GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -11,7 +11,7 @@ Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-sou
 BuildArch:	noarch
 
 %description
-Remixed-theme is a remix of my favourite GTK2/3 theme- Arc-Darker and customized default gnome-shell
+Remixed-theme is a remix of my favourite GTK2/3 theme Arc-* and customized default gnome-shell
 
 %prep
 %setup -q -n Remixed
@@ -25,13 +25,26 @@ for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
 	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
 done
 
+%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed-Light
+for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
+	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
+done
+
+%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed-Dark
+for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
+	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
+done
+
 %files
 %defattr(-,root,root)
 %doc CREDITS LICENSE.txt
 %{_datadir}/themes/Remixed
 
 %changelog
-* Fri Apr 1 2016 Milan Zink <zeten30@gmail.com> - 1.5-1
+* Thu Apr 7 2016 Milan Zink <zeten30@gmail.com> - 1.6-1
+- Light / Dark variant added
+
+* Fri Apr 1 2016 Milan Zink <zeten30@gmail.com> - 1.5-2
 - Full theme set (including metacity, cinnamon, xfwm4)
 - GTK2 uses dark theme
 
