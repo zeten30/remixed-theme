@@ -27,12 +27,12 @@ done
 
 %{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed-Light
 for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
-	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
+	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed-Light
 done
 
 %{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed-Dark
 for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
-	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
+	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed-Dark
 done
 
 %files
