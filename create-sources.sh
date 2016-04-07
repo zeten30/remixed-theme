@@ -9,7 +9,7 @@ cd ..
 
 #THEMES
 cd themes
-tar czf remixed-theme.tar.gz Remixed
+tar czf remixed-theme.tar.gz Remixed Remixed-Dark Remixed-Light
 mv remixed-theme.tar.gz ~/rpmbuild/SOURCES/
 
 
