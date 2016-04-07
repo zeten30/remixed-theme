@@ -1,7 +1,7 @@
 Name:		remixed-theme
 Version:	1.6
 Release:	1%{?dist}
-Summary:	Remix of my GTK2/3 themes
+Summary:	Remix of Arc GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
 URL:		https://github.com/zeten30/remixed-theme
@@ -11,10 +11,10 @@ Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-sou
 BuildArch:	noarch
 
 %description
-Remixed-theme is a remix of my favourite GTK2/3 theme Arc-* and customized default gnome-shell
+Remixed-theme is a remix of my favourite GTK2/3 theme Arc-* and customized Arc gnome-shell theme
 
 %prep
-%setup -q -n Remixed
+%setup -q -n Remixed Remixed-Light Remixed-Dark
 
 %build
 # Nothing to build
@@ -39,6 +39,8 @@ done
 %defattr(-,root,root)
 %doc CREDITS LICENSE.txt
 %{_datadir}/themes/Remixed
+%{_datadir}/themes/Remixed-Light
+%{_datadir}/themes/Remixed-Dark
 
 %changelog
 * Thu Apr 7 2016 Milan Zink <zeten30@gmail.com> - 1.6-1
