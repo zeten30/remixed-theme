@@ -14,30 +14,19 @@ BuildArch:	noarch
 Remixed-theme is a remix of my favourite GTK2/3 theme Arc-* and customized Arc gnome-shell theme
 
 %prep
-%setup -q -n Remixed Remixed-Light Remixed-Dark
+%setup -q -n themes
 
 %build
 # Nothing to build
 
 %install
-%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed
-for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
-	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed
-done
-
-%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed-Light
-for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
-	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed-Light
-done
-
-%{__install} -d -m755 %{buildroot}%{_datadir}/themes/Remixed-Dark
-for file in gtk-2.0 gtk-3.0 gnome-shell metacity-1 unity xfwm4 ; do
-	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes/Remixed-Dark
+%{__install} -d -m755 %{buildroot}%{_datadir}/themes/
+for file in Remixed Remixed-Light Remixed-Dark ; do
+	%{__cp} -pr ${file} %{buildroot}%{_datadir}/themes
 done
 
 %files
 %defattr(-,root,root)
-%doc CREDITS LICENSE.txt
 %{_datadir}/themes/Remixed
 %{_datadir}/themes/Remixed-Light
 %{_datadir}/themes/Remixed-Dark
