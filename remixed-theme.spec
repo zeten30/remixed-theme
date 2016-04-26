@@ -7,7 +7,7 @@ License:	GPL-3
 URL:		https://github.com/zeten30/remixed-theme
 Vendor:		Milan Zink <zeten30@gmail.com>
 Source0:	remixed-theme.tar.gz
-Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-source-code-pro-fonts
+Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-source-code-pro-fonts lato-fonts
 BuildArch:	noarch
 
 %description
