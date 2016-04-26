@@ -1,6 +1,6 @@
 Name:		remixed-theme
 Version:	1.6
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Remix of Arc GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
