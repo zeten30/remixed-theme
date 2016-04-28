@@ -1,6 +1,6 @@
 Name:		remixed-icon-theme
 Version:	1.4
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Remix of my favourite icon themes
 Group:		User Interface/Desktops
 License:	GPL-3
