@@ -130,6 +130,9 @@ StScrollBar {
   border-right-width: 1px;
   border-left-width: 5px;
   color: transparent; }
+  .popup-menu-item.selected .slider {
+    -slider-background-color: rgba(0, 0, 0, 0.2);
+    -slider-active-background-color: #ffffff; }
 
 .check-box StBoxLayout {
   spacing: .8em; }
@@ -151,11 +154,14 @@ StScrollBar {
 .toggle-switch {
   width: 50px;
   height: 20px;
-  background-size: contain; }
-  .toggle-switch-us, .toggle-switch-intl {
-    background-image: url("light-assets/switch/switch-off.svg"); }
-    .toggle-switch-us:checked, .toggle-switch-intl:checked {
-      background-image: url("light-assets/switch/switch-on.svg"); }
+  background-size: contain;
+  background-image: url("light-assets/switch/switch-off.svg"); }
+  .toggle-switch:checked {
+    background-image: url("light-assets/switch/switch-on.svg"); }
+  .popup-menu-item.selected .toggle-switch {
+    background-image: url("common-assets/switch/switch-off-selected.svg"); }
+    .popup-menu-item.selected .toggle-switch:checked {
+      background-image: url("common-assets/switch/switch-on-selected.svg"); }
 
 .shell-link {
   color: #2679db; }
@@ -452,9 +458,9 @@ StScrollBar {
       box-shadow: none;
       border-image: url("light-assets/menu/submenu-open.svg") 9 9 9 9; }
     .popup-menu .popup-menu-item:active, .popup-menu .popup-menu-item.selected {
-      color: #5c616c;
+      color: #ffffff;
       background-color: transparent;
-      border-image: url("light-assets/menu/menu-hover.svg") 9 9 1 1; }
+      border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1; }
     .popup-menu .popup-menu-item:insensitive {
       color: rgba(92, 97, 108, 0.5);
       background: none; }
@@ -489,7 +495,7 @@ StScrollBar {
 
 .popup-separator-menu-item {
   height: 2px;
-  margin: 10px 0px;
+  margin: 0;
   background-color: transparent;
   border: none;
   border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1; }
@@ -1416,16 +1422,22 @@ StScrollBar {
   padding: 10px 8px 5px 8px;
   spacing: 4px; }
 
-.workspace-thumbnails {
+.workspace-thumbnails, .workspace-thumbnails:rtl,
+.workspace-thumbnails-left,
+.workspace-thumbnails-left:rtl {
   visible-width: 40px;
   spacing: 11px;
-  padding: 12px;
+  padding: 12px; }
+
+.workspace-thumbnails,
+.workspace-thumbnails-left:rtl {
   padding-right: 7px;
   border-image: url("common-assets/dash/dash-right.svg") 9 9 9 9; }
-  .workspace-thumbnails:rtl {
-    padding: 12px;
-    padding-left: 7px;
-    border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9; }
+
+.workspace-thumbnails:rtl,
+.workspace-thumbnails-left {
+  padding-left: 7px;
+  border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9; }
 
 .workspace-thumbnail-indicator {
   border: 4px solid rgba(82, 148, 226, 0.8);
@@ -1593,6 +1605,10 @@ StScrollBar {
   .legacy-tray-icon-box StButton {
     width: 24px;
     height: 24px; }
+
+.masterslider.smaller .masterlabel,
+.masterslider.smaller .slider {
+  min-width: 155px; }
 
 .magnifier-zoom-region {
   border: 2px solid #5294E2; }

@@ -4,8 +4,8 @@ style "theme-panel" {
   ythickness = 0
 
   bg[NORMAL] = "#2B2E37"
-  bg[ACTIVE] = shade(1.45, "#2B2E37")
-  bg[PRELIGHT] = shade(0.9, @selected_bg_color)
+  bg[ACTIVE] = @selected_bg_color
+  bg[PRELIGHT] = "#3f4453"
   bg[SELECTED] = @selected_bg_color
 
   fg[NORMAL] = "#BAC3CF"
@@ -28,6 +28,10 @@ style "theme-panel" {
     textstyle = 0
     contrast = 0.0
   }
+}
+
+style "theme-panel-progressbar" {
+  bg[ACTIVE] = "#1D1F26"
 }
 
 style "panelbar" {
@@ -93,27 +97,6 @@ style "workspace-switcher" = "theme-panel" {
   bg[SELECTED] = @selected_bg_color
 }
 
-style "window-buttons" = "theme-panel"
-{
-  xthickness = 3
-  ythickness = 3
-
-  bg[ACTIVE] = shade(0.75, @selected_bg_color)
-  bg[PRELIGHT] = shade(0.9, @selected_bg_color)
-  bg[SELECTED] = @selected_bg_color
-
-  engine "murrine" {
-    reliefstyle = 0
-    glazestyle = 0
-    glow_shade = 1.0
-    highlight_shade = 1.0
-    roundness = 0
-    gradient_shades = {1.0,1.0,1.0,1.0}
-    textstyle = 0
-    contrast = 0.0
-  }
-}
-
 style "indicator" = "theme-panel" {
   xthickness = 0
   ythickness = 0
@@ -158,7 +141,10 @@ widget_class "*Notif*Brasero*"                        style "theme-panel"
 # XFCE panel theming.
 widget "*Xfce*Panel*"                                 style "theme-panel"
 class "*Xfce*Panel*"                                  style "theme-panel"
+widget "*Xfce*Panel*GtkProgressBar"                   style "theme-panel-progressbar"
 widget "*WnckPager*"                                  style "workspace-switcher"
+widget "*TopMenu*"                                    style "theme-panel"
+widget "*XfceTasklist*"                               style "panelbuttons"
 
 # Fix gtk-entries in the panel
 widget "*bookmark*GtkEntry"                           style "panel-entry" # fixes smartbookmark-plugin
@@ -172,4 +158,3 @@ widget "*PanelApplet*"                                style "theme-panel-text"
 # Override general panel-style with specific plugin-styles
 widget "*indicator-applet*"                           style "indicator"
 widget "*indicator-button*"                           style "indicator"
-widget "*XfceTasklist*"                               style "window-buttons"
