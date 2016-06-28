@@ -32,8 +32,12 @@ done
 %{_datadir}/themes/Remixed-Dark
 
 %changelog
-* Tue Jun 21 2016 Milan Zink <zeten30@gmail.com> - 1.6-5
-- Arc Theme updates -> F24 
+* Wed Jun 28 2016 Milan Zink <zeten30@gmail.com> - 1.6-5
+- Arc Theme updated
+- Gnome-shell theme fonts resize
+
+* Tue Jun 21 2016 Milan Zink <zeten30@gmail.com> - 1.6-4
+- Arc Theme updated
 
 * Thu Apr 7 2016 Milan Zink <zeten30@gmail.com> - 1.6-1
 - Light / Dark variant added
