@@ -1,6 +1,6 @@
 Name:		remixed-theme
 Version:	1.6
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	Remix of Arc GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -32,6 +32,10 @@ done
 %{_datadir}/themes/Remixed-Dark
 
 %changelog
+* Wed Jun 28 2016 Milan Zink <zeten30@gmail.com> - 1.6-5
+- Arc Theme updated
+- Gnome-shell theme fonts resize
+
 * Tue Jun 21 2016 Milan Zink <zeten30@gmail.com> - 1.6-4
 - Arc Theme updated
 
