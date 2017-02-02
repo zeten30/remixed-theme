@@ -1,6 +1,6 @@
 Name:		remixed-icon-theme
-Version:	1.5
-Release:	2%{?dist}
+Version:	2.0
+Release:	1%{?dist}
 Summary:	Remix of my favourite icon themes
 Group:		User Interface/Desktops
 License:	GPL-3
@@ -30,6 +30,9 @@ done
 %{_datadir}/icons/Remixed
 
 %changelog
+* Thu Feb 2 2017 Milan Zink <zeten30@gmail.com> - 2.0.1
+- Fedora 25 / Gtk 3.22
+
 * Wed May 11 2016 Milan Zink <zeten30@gmail.com> - 1.5.1
 - Super Flat Remix update
 

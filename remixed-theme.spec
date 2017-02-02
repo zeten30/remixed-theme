@@ -1,13 +1,13 @@
 Name:		remixed-theme
-Version:	1.6
-Release:	5%{?dist}
+Version:	2.0
+Release:	2%{?dist}
 Summary:	Remix of Arc GTK2/3 themes
 Group:		User Interface/Desktops
 License:	GPL-3
 URL:		https://github.com/zeten30/remixed-theme
 Vendor:		Milan Zink <zeten30@gmail.com>
 Source0:	remixed-theme.tar.gz
-Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-source-code-pro-fonts lato-fonts
+Requires: 	gtk-murrine-engine gtk2-engines adobe-source-sans-pro-fonts adobe-source-code-pro-fonts google-noto-fonts-common google-noto-sans-fonts google-noto-serif-fonts
 BuildArch:	noarch
 
 %description
@@ -32,6 +32,12 @@ done
 %{_datadir}/themes/Remixed-Dark
 
 %changelog
+* Thu Feb 2 2017 Milan Zink <zeten30@gmail.com> - 2.0.2
+- Dependencies & fonts update
+
+* Thu Feb 2 2017 Milan Zink <zeten30@gmail.com> - 2.0.1
+- Fedora 25 / Gtk 3.22
+
 * Wed Jun 28 2016 Milan Zink <zeten30@gmail.com> - 1.6-5
 - Arc Theme updated
 - Gnome-shell theme fonts resize
